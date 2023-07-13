@@ -2,6 +2,7 @@
 using SchoolManagement.MVC.Models;
 using System.Diagnostics;
 
+
 namespace SchoolManagement.MVC.Controllers
 {
     //Controller=> Control The Flow Of The Application
