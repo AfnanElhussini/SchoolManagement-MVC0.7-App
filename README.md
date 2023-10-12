@@ -1,1 +1,1 @@
-# School Management MVC APP
+# School Management MVC 0.7 APP
