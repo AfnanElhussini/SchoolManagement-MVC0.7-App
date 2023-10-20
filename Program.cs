@@ -10,7 +10,7 @@ namespace SchoolManagement.MVC
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the IOC( Inversion of Control )container.
-            var connectionString = builder.Configuration.GetConnectionString("SchoolContext");
+            var connectionString = builder.Configuration.GetConnectionString("SchoolConnection");
             builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(connectionString));
             builder.Services.AddControllersWithViews();
 
