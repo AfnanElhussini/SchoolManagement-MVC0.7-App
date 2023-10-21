@@ -13,6 +13,15 @@ namespace SchoolManagement.MVC
             var connectionString = builder.Configuration.GetConnectionString("SchoolConnection");
             builder.Services.AddDbContext<SchoolContext>(options => options.UseSqlServer(connectionString));
             builder.Services.AddControllersWithViews();
+            builder.Services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAll", builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
+            });
 
             var app = builder.Build();
 
